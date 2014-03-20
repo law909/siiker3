@@ -1,0 +1,23 @@
+<p>Ajánlatot kértek a következõ kalkulációról:</p>
+<p>
+{$cegnev}<br>
+{$cegcime}<br>
+{$szemelyneve}<br>
+{$adoszam}<br>
+{$cegjegyzekszam}<br>
+{$telefonszam}<br>
+{$bankneve}<br>
+{$bankszamlaszam}<br>
+{$termeknev}<br>
+{$honap}<br>
+{$deviza}<br>
+{$arfolyam}<br>
+{$eszkertdev}<br>
+{$eszkerthuf}<br>
+{$indreszldev}<br>
+{$indreszlhuf}<br>
+{$szerzkotdij}<br>
+{$maradvanyerthuf}<br>
+{$havilizingdev}<br>
+{$havilizinghuf}<br>
+</p>

@@ -1,0 +1,581 @@
+/*kaba2*/
+
+body{
+ background: #fff url('images/back.jpg') repeat-x;
+ font-family:Arial,Verdana,Helvetica,sans-serif;
+ margin-top: 0;
+ text-align: center;
+ font-size: 9pt;
+ color: #333;
+}
+
+* {margin: 0px; padding: 0px;}
+
+DIV{
+  -moz-box-sizing:border-box;box-sizing:border-box;
+  -webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;
+}
+a {
+outline: none;
+}
+
+/*fejlec alatti rész a láblécig*/
+.whole{
+ width: 962px;
+ margin: 0 auto;
+ text-align: left;
+ overflow: auto;
+}
+/*fejlec*/
+.head{
+ height: 290px;
+ width: 962px;
+ margin: 0 auto;
+ background: url('images/logo.jpg') no-repeat;
+ text-align: right;
+ }
+ 
+.head h1, .head h3{
+ visibility:hidden;
+}
+/*lábléc*/
+.foot{
+ width: 100%;
+ text-align: right;
+ background: url('images/foot.jpg') repeat-x;
+ margin: 0 auto;
+ height: 161px;
+ }
+/*baloldal margin: top right bottom left*/ 
+.left{
+ float: left;
+ width: 175px;
+ margin: 0 3px 0 5px;
+ }
+/*jobboldal*/  
+.right{
+ float: right;
+ width: 160px;
+ margin: 0 0 0 3px;
+ }
+ 
+ .content{
+overflow: auto;
+ }
+
+/*középsõ rész*/ 
+.center{
+overflow: auto;
+background: #e2e2e2;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+padding: 0 0 100px 0;
+min-height: 500px;
+ }
+ /*jobb-, baloldali (általános, legtöbbször..., refer., belépés...) keretek fejléce (itt a középsõké is)*/ 
+.wf, .wf_main{
+}
+
+.wf_in, .wf_in_2lines, .wf_main_in{
+	color:#333;
+	padding:5px;
+	text-transform: uppercase;
+	font-size: 10pt;
+	letter-spacing: 1px;
+}
+.wf_main_in span {
+}
+
+/*menupontok kerete*/
+.mainmenu1{
+ margin-bottom: 10px;
+}
+/*termék rövid bemutatóablaka*/
+.termek_rovid{
+ border-bottom: 1px solid silver;
+ overflow: auto;
+ margin:0 10px 10px 0;
+}
+
+.hir_lista, .hir_tartalom, .menu_tartalom{
+ width: 540px;
+ margin: 10px 0 10px 0;
+}
+
+.hir_lista{
+ overflow: auto;
+}
+
+
+
+.main_container{
+padding: 5px;
+}
+
+
+.menu_tartalom, .foold_szoveg, .hir_lista , .term_lista p, .tema_w, .tema_lista_w{
+padding: 5px; 
+}
+
+.linktartalom{
+overflow: auto;
+margin: 
+}
+
+.linktartalom p.szoveg_bold{
+margin: 0 0 10px 0;
+}
+
+
+.linkbox{
+margin: 0 0 30px 70px;
+overflow: auto;
+}
+
+.hlink{
+height: 84px;
+width: 230px;
+float: left;
+border: 1px solid #ccc;
+background: #EBF2C7;
+line-height: 80px;
+margin: 0 3px 3px 0;
+padding: 2px;
+}
+
+.hlink img{
+ vertical-align: middle;
+ border: 1px solid white;
+ margin: 0 3px 0 0;
+
+}
+.hlink a{
+ margin: 0 0 0 3px;
+ color:#666;
+}
+
+.linktartalom p.szoveg_bold{
+margin: 5px 15px;
+}
+
+.termek_adat{
+width: 540px;
+}
+
+.termek_adat div.termek_kis{
+margin:20px 0 0 0;
+}
+
+.termek_r_w{}
+.search_w{}
+.leg_w{}
+.partner_be_w{
+display:none
+}
+.hir_lista_w{}
+.menu_tartalom_w, .hir_w, .hirdoboz{
+padding: 5px;
+}
+.foold_w{}
+.hirmini{}
+
+.hirdoboz_hir{
+margin: 0 0 5px 0;
+border-bottom: 1px solid silver;
+padding: 0 0 5px 0;
+}
+
+/*menupontok - alap- és már megnyomott helyzet*/ 
+a.menu1:link, a.menu1:visited {
+	color: #666 !important;
+	background: url('images/menu1.jpg') top left no-repeat;
+	padding: 4px 0 0 20px;
+	height: 40px ! important;
+	display:block;
+	vertical-align: middle;
+	font-size: 11px;
+	font-weight: bold;
+}
+/*menupontok - egérrel fölötte*/ 
+a.menu1:hover {
+	color: #333 !important;
+	background: url('images/menu1.jpg') bottom left no-repeat;
+}
+/*menupontok - éppen kiválasztott*/ 
+a.menu1#active_menu {
+	background: #7f54aa none !important;
+	background-color: #7f54aa !important;
+	background-image: none !important;
+	padding-left: 5px !important;
+	color: #400080 !important;
+}
+/*menupontok - éppen kiválasztott egérrel fölötte*/ 
+a.menu1#active_menu:hover {
+	background-color: #005500 !important;
+	color: #400080 !important;
+	background: #005500 none !important;
+	background-image: none !important;
+}
+
+.mainmenu2{
+ width: 100%;
+ padding: 5px 0 2px 0;
+ overflow: auto;
+ margin: 0 auto;
+ text-align: center;
+ background: url('images/menu2.jpg');
+ height: 27px;
+ }
+
+/*menu2*/ 
+a.menu2 span {
+	outline: none;
+}
+
+a.menu2:link, a.menu2:visited {
+	color: #666 !important;
+	height: auto !important;
+	text-transform: uppercase;
+	vertical-align: middle !important;
+	font-size: 11px;
+	text-decoration: none;
+	outline: none;
+	padding: 0px 5px 0 5px;
+	font-weight: bold;
+}
+/*menupontok - egérrel fölötte*/ 
+a.menu2:hover {
+	color: #333 !important;
+}
+
+a.menu2:hover span {
+
+}
+	
+
+/*menupontok - éppen kiválasztott*/ 
+a.menu2#active_menu {
+
+}
+/*menupontok - éppen kiválasztott egérrel fölötte*/ 
+a.menu2#active_menu:hover {
+	background-color: #005500 !important;
+	color: #400080 !important;
+	background: #005500 none !important;
+	background-image: none !important;
+}
+/*leglegleg keret*/ 
+.leg, .search, .ref{
+ margin-bottom: 10px;
+ padding-left: 10px;
+ width: 150px;
+}
+.ref img{
+ border: 1px solid #ccc;
+ margin: 5px 0 2px 0;
+}
+/*cuuccok amiket középre rendeztünk*/
+.nyelv, .bej_reg, .lapozo, .lapozo2, .link , .bej_adataim{
+ text-align: center;
+ margin-bottom: 10px;
+}
+
+ .fillinform, .fif_butt{
+ margin: 0 auto;
+ text-align: right;
+ width: 215px;
+ }
+ 
+/*keresõ margin: top right bottom left*/
+.search, .stat{
+ text-align: center;
+}
+/*azonosító, jelszó margin: top right bottom left*/
+.az_jel {
+ text-align: right;
+}
+
+.az_jel input.general_input_part{
+margin: 0 10px 2px 0;
+}
+
+
+/*a lap tetejére*/
+.tetejere, .forras{
+ text-align: right;
+ padding: 10px;
+}
+
+.tetejere{
+ width: 962px;
+ margin: 0 auto;
+ text-align: right;
+ overflow: auto;
+}
+
+/*a képek általában, hogy ne legyen kerete a hivatkozás miatt*/
+img{
+ border: none;}
+ 
+/*kis termékképek */
+.termek_rovidle_container {
+ float: left; 
+}
+
+.termek_rovidle_img {
+ width: 140px;
+ height: 140px;
+ line-height: 136px;
+ float: left;
+ border: 1px solid #ccc;
+ text-align: center;
+ background: #EBF2C7;
+ margin: 0 5px 5px 0;
+}
+.termek_rovidle_noimg {
+display:none;
+}
+
+img.rovidle{
+vertical-align:middle;
+margin-right: -2px;
+}
+
+.termek_kis{
+
+}
+
+.termek_kis img, img.termek_kis_rovid{
+ vertical-align: text-top;
+ float: left;
+ margin: 0 5px 3px 3px;;
+}
+
+/*kis hírképek */
+img.hir{
+ vertical-align: text-top;
+ float: left;
+ margin: 0px 5px 0px 0px;
+ border: 1px solid gray;
+}
+/*kedvencek, kosár kép*/
+.fav_cart{
+float: right;
+margin: 3px;
+clear: both;
+}
+
+.favorite, .cart{
+float: right;
+margin: 0 5px 0 0;
+}
+
+.cart{
+float: right;
+margin: 10px 5px 0 0;
+}
+
+.question{
+display: none;
+}
+
+/*menupont tartalom képek divje*/
+.menup_kep{
+text-align: center;
+}
+
+/*menupont tartalom képek*/
+.menup_kep img{
+max-width: 500px;
+}
+/*linktár képek*/
+.link_kep{
+vertical-align: middle;
+margin: 0 5px 3px 0;
+}
+/*termék neve link*/
+.termek_link a{
+ font-weight: bold;
+ color: #333;
+} 
+
+a, a.link_bold, a.termek_link{
+ text-decoration: none;
+ color: #333;
+ }
+/*egyéb, nem terméknév link, ami bold*/
+a.link_bold{
+ font-weight: bold;
+}
+
+.hircim_lapozo{
+ font-weight: bold;
+ padding: 0 0 0 0px;
+ color: #666;
+}
+
+
+a:hover, a.link_bold:hover, a.termek_link:hover{
+ color: #006600;
+ }
+ /*termékcsoport lista*/
+ a.almenu{
+ font-family: arial;
+ font-size: 12px;
+ color: #333;
+ text-transform: uppercase;
+ line-height: 150%;
+ }
+ 
+ a.almenu:hover{
+ color: #009900;
+ }
+/*megjegyzés, bõvebben, cikkszám*/
+.megjegyzes a, .forras{
+font-size: 9px;
+color: #666;
+}
+
+.termcsop_nav{
+font-size: 10pt;
+font-weight: bold;
+padding: 5px 0 0 10px;
+}
+.termcsop_nav a{
+color:#333;
+}
+
+.termcsop_nav a:hover{
+color:#666;
+}
+
+.cim{
+font-size: 12pt;
+font-weight: bold;
+padding: 5px 0 5px 5px;
+}
+
+.termek_cim{
+font-size: 12pt;
+font-weight: bold;
+padding: 0 0 0 10px;
+}
+.termek_cim2{
+font-size: 10pt;
+font-weight: bold;
+padding: 0 0 0 10px;
+}
+
+.lead, .termekleiras p{
+
+}
+.termekleiras{
+padding: 20px 5px 20px 5px;
+}
+
+.szoveg_bold{
+font-weight: bold;
+}
+.stat_no{
+ font-weight: bold;
+ font-size: 12pt;
+ background: #fff;
+ padding: 3px 10px;
+ color: #000;
+}
+
+/*kitöltõmezõk*/ 
+.general_input, .general_input_part{
+ font-family: arial;
+ font-size: 9pt;
+ border: 1px solid gray;
+ border-bottom: 1px solid silver;
+ border-right: 1px solid silver;
+ background-color: #F2F2F2;
+ margin-bottom: 3px;
+ }
+/*submit gombok*/
+.general_button{
+ font-family: arial;
+ font-size: 8pt;
+ color: black;
+ color: #333
+}
+
+.error_input {
+	font-family: arial;
+	font-size: 9pt;
+	border: 1px solid gray;
+	border-bottom: 1px solid silver;
+	border-right: 1px solid silver;
+	background-color: red;
+}
+
+.keszlet {
+display: none;
+}
+
+.ar {
+float: right;
+margin: 0 0 10px 10px;
+padding: 5px;
+font-size: 10pt;
+line-height: 200%;
+font-weight: bold;
+clear: both;
+}
+
+.ar_n {
+color: #333;
+}
+
+.ar_b {
+font-size: 12pt;
+color: #9B6912;
+}
+
+.termek_galeria {
+text-align: center;
+width: 100%;
+margin: 0 auto;
+overflow: auto;
+}
+
+.termek_galeria img{
+margin: 3px 3px 0 0;
+}
+
+.documents, .termektulajdonsag {
+padding: 10px;
+}
+
+.documents li, .termektulajdonsag li{
+list-style-type: none;
+}
+
+div.blind {
+display:none;
+}
+
+div.blind img{
+
+}
+
+.blind_c {
+ background: url('images/blind_f.gif') no-repeat top  #e2e2e2;
+ padding: 2px 0 1px 6px;
+ outline: none;
+ width: 33px;
+ height: 24px;
+ border-bottom: 1px solid #8C8C8C;
+}
+
+.reklam{
+text-align: center;
+padding: 0 0 20px 0;
+}
+.reklam img{
+max-width: 155px;
+margin: 0 0 10px 0;
+}
