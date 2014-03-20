@@ -1,6 +1,6 @@
 <form id="LoginForm" method="post" action="{$login.actionuri}">
     <div class="loginformfield">
-        <input id="LoginNevEdit" type="text" size="12" name="user_login_nev" value="{$text->partner->felhasznalonev}" placeholder="FELHASZNÁLÓ" class="login-input"/>
+        <input id="LoginNevEdit" type="text" size="12" name="user_login_nev" placeholder="FELHASZNÁLÓ" class="login-input"/>
     </div>
     <div class="loginformfield">
         <input id="LoginPassEdit" type="password" size="12" name="user_login_jelszo" placeholder="JELSZÓ" class="login-input"/>
