@@ -43,7 +43,7 @@
 	</tbody>
 	</table>
 	</form>
-	<p class="megjegyzes2">{$text->regadatform->kotelezo2}<br />{$text->regadatform->kotelezo3}</p>
+	<p class="megjegyzes2">* Kötelezõ kitölteni</p>
 	{else}
 	<p class="szoveg_bold">{$text->kosar->vasarlashoz}</p>
 	{/if}
