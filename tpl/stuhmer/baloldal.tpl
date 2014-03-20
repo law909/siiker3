@@ -1,5 +1,7 @@
 <div class="left" id="baloldal">
+    {if (!$login.viszontelado)}
 {include('menu1.tpl')}
+    {/if}
 
 {include('menu3.tpl')}
 

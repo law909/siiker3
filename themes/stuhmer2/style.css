@@ -89,16 +89,21 @@ overflow:hidden;
 }
 
 .gyorsszoveg {
-    width: 400px;
+    width: 380px;
 }
 .gyorsrow {
     clear: both;
+    padding-top: 20px;
 }
 .gyorscol {
     float: left;
 }
 .gyorsinput {
     width: 40px;
+}
+input.gyorsinput:focus {
+    background-color: #C10A26;
+    color: white;
 }
 .gyorssubmit {
     float: right;
@@ -339,24 +344,24 @@ width: 620px; }
     height: 1em;
     width: 120px;
     padding: 3px;
-    background-color: #A9844F;
-    color: #846137;
+    background-color: #C10A26;
+    color: white;
 }
 
 ::-webkit-input-placeholder {
-    color: #846137;
+    color: white;
     text-align: center;
 }
 :-moz-placeholder {
-    color: #846137;
+    color: white;
     text-align: center;
 }
 ::-moz-placeholder {
-    color: #846137;
+    color: white;
     text-align: center;
 }
 :-ms-input-placeholder {
-    color: #846137;
+    color: white;
     text-align: center;
 }
 
