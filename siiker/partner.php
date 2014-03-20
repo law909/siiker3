@@ -140,7 +140,7 @@ class siiker_partner extends siiker_dbalapclass {
 		$uzenet=$this->JAXcheckUniqueUsername($adat['webusername']);
 		if ($uzenet<>'OK') {
 			$this->sendRegErtesito(' Van már ilyen felhasználó: '.$adat['webusername']);
-			return $uzenet;
+			return 'Van már ilyen felhasználó';
 		}
 		else {
 			$uzenet=$this->JAXcheckUniqueEmail($adat['email']);
@@ -154,7 +154,7 @@ class siiker_partner extends siiker_dbalapclass {
 					$mail->send();
 				}
 				$this->sendRegErtesito(' Van már ilyen email: '.$adat['email']);
-				return $uzenet;
+				return 'Van már ilyen email';
 			}
 			else {
 				if ($this->getLoggedIn()) {
@@ -168,7 +168,7 @@ class siiker_partner extends siiker_dbalapclass {
 					$updatesql='UPDATE partner SET ';
 					foreach ($adat as $mezonev=>$ertek) {
 						if ($mezonev=='webpassword') {
-							$updatesql.=$mezonev.'=SHA1(MD5("'.$ertek.'")),';
+							$updatesql.=$mezonev.'="' . sha1(md5($ertek)) .'",';
 						}
 						else {
 							$updatesql.=$mezonev.'="'.$ertek.'",';
@@ -184,7 +184,7 @@ class siiker_partner extends siiker_dbalapclass {
 					foreach ($adat as $mezonev=>$ertek) {
 						$insertfields.=$mezonev.',';
 						if ($mezonev=='webpassword') {
-							$insertvalues.='SHA1(MD5("'.$ertek.'")),';
+							$insertvalues.='"'.sha1(md5($ertek)).'",';
 						}
 						else {
 							$insertvalues.='"'.$ertek.'",';
@@ -334,6 +334,8 @@ class siiker_partner extends siiker_dbalapclass {
 	}
 
 	public function Login($uname,$upass) {
+//        siiker_store::writelog($uname . ' => ' . $upass);
+//        siiker_store::writelog('SELECT kod FROM partner WHERE (webusername="'.$uname.'") AND (webpassword="'.sha1(md5($upass)).'") AND (valid=1)');
 		$p=$this->getDb()->fetchRow('SELECT kod FROM partner WHERE (webusername="'.$uname.'") AND (webpassword="'.sha1(md5($upass)).'") AND (valid=1)');
 		if ($p) {
 			$this->initLoginData($p['kod'],$uname,$upass);
@@ -368,8 +370,8 @@ class siiker_partner extends siiker_dbalapclass {
 	}
 
 	public function Logout() {
-		Zend_Session::namespaceUnset('part');
 		$this->kod=0;
+        siiker_store::getUserSession()->kod = null;
 		unset($this->username);
 		unset($this->password);
 	}

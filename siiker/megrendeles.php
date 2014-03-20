@@ -2,7 +2,7 @@
 class siiker_megrendeles extends siiker_dbalapclass {
 
     public function getFejData($kod) {
-        $rec = $this->getDb()->fetchOne('SELECT * FROM web_ws_megrendeles WHERE kod=' . $kod);
+        $rec = $this->getDb()->fetchRow('SELECT * FROM web_ws_megrendeles WHERE kod=' . $kod);
         return $rec;
     }
 

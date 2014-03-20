@@ -27,11 +27,12 @@ outline: none;
 }
 /*fejlec*/
 .head{
- height: 161px;
+ height: 130px;
  width: 999px;
  margin: 0 auto;
  background: url('images/logo.jpg') no-repeat;
  text-align: right;
+ position: relative;
  }
 
  .head h1{
@@ -87,10 +88,10 @@ overflow:hidden;
  padding: 4px 0px 0px 10px;
  font-weight: bold;
  text-transform: uppercase;
- font-size: 15px;
- letter-spacing: 1px;
+ font-size: 13px;
+ letter-spacing: 0;
  text-align: left;
- font-family: tahoma;
+ font-family: Verdana;
  height:22px;
  }
 
@@ -242,12 +243,12 @@ width: 640px;
 .termek_r_w{}
 
 .search_w{
-    float: right;
     margin: 0;
-    position: relative;
-    top: 78px;
+    position: absolute;
+    top: 98px;
     width: 170px;
-    }
+    right: 0;
+}
 
 
 
@@ -277,16 +278,16 @@ padding-right: 83px;
     padding: 0;
 }
 
-.bej_adataim{
-margin: 0 0 0 5px;
-}
-
-.bej_adataim input.general_button{
-margin: 0 0 0 10px;
-}
-
 .bej_reg a.link_bold {
 	text-transform: uppercase;
+}
+
+.bej_adataim {
+    color: #fff;
+}
+
+.bej_adataim .link_bold {
+    color: #fff;
 }
 
 .hir_lista_w{
@@ -302,20 +303,60 @@ width: 620px; }
 
 }
 
+.loginformfield {
+    padding: 10px 0 0 30px;
+    text-align: center;
+}
 
+.login-input {
+    border-radius: 5px;
+    border: 1px solid #BC9D74;
+    height: 1em;
+    width: 120px;
+    padding: 3px;
+    background-color: #A9844F;
+    color: #846137;
+}
+
+::-webkit-input-placeholder {
+    color: #846137;
+    text-align: center;
+}
+:-moz-placeholder {
+    color: #846137;
+    text-align: center;
+}
+::-moz-placeholder {
+    color: #846137;
+    text-align: center;
+}
+:-ms-input-placeholder {
+    color: #846137;
+    text-align: center;
+}
+
+.login-button {
+    border-radius: 5px;
+    border: 1px solid #BC9D74;
+    width: 128px;
+    padding: 3px;
+    background-color: #A9844F;
+    color: #fff;
+}
 
 /*menupontok - alap- és már megnyomott helyzet*/
 a.menu1:link, a.menu1:visited {
 	background: !important;
 	color: #fff !important;
-	padding: 5px 30px !important;
+	padding: 5px 35px !important;
 	height: auto !important;
 	display: block;
 	vertical-align: middle !important;
-	font-size: 14px;
+	font-size: 13px;
 	width: auto;
 	text-decoration: none;
-	font-family: tahoma;
+	font-family: "Times New Roman";
+    font-style: italic;
 
 }
 /*menupontok - egérrel fölötte*/
@@ -399,12 +440,12 @@ a.menu3:link, a.menu3:visited {
 	height: auto;
 	display: block;
 	vertical-align: middle;
-	font-size: 15px;
+	font-size: 13px;
 	width: auto;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: Tahoma;
-	letter-spacing: 1px;
+	font-family: Verdana;
+	letter-spacing: 0;
 	margin-left: 1px;
 	text-align: left;
 	font-weight: bold;

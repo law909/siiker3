@@ -17,23 +17,9 @@
 {else}
 
 <div class="head" id="fejlec">
-		{include('blind.tpl')}
-
-	<h1>{$spectext->fejlec->focim}</h1>
-	<h3>{$spectext->fejlec->alcim}</h3>
-
-
-	{include('gyorskereso.tpl')}
-			{include('nyelvvalaszto.tpl')}
-	{if (!$loggedin)}
-		{include('partner_belepes.tpl')}
-	{else}
-		{include('partner_udvozles.tpl')}
-	{/if}
-
-
-
-
+{include('blind.tpl')}
+{include('gyorskereso.tpl')}
+{include('nyelvvalaszto.tpl')}
 </div>
 
 {/if}

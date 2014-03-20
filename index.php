@@ -263,11 +263,20 @@ switch ($command) {
 		break;
 	case siiker_command::$PartnerModOK:
 	case siiker_command::$PartnerRegOK:
+        $sikerult = 'OK';
 		if (siiker_store::milyennap(siiker_store::getParams()->getParam('milyennap',''))) {
 			$sikerult=$user->Register($params);
 		}
-//		else {die('fuckoff');}
+        else {
+            $sikerult = 'Nem ilyen nap van.';
+        }
 		$oldalkozep=new siiker_funkcio($tplloader->getTemplateName($command));
+        if ($sikerult!=='OK') {
+            $oldalkozep->assignData('szoveg', $sikerult);
+        }
+        else {
+            $oldalkozep->assignData('szoveg', false);
+        }
 		$layouthandler->assignMaindata($oldalkozep->getTemplateResult());
 		break;
 	case siiker_command::$PartnerRegAct:

@@ -1,8 +1,8 @@
 <div class="right" id="jobboldal">
+	{if (!$loggedin)}
+		{include('partner_belepes.tpl')}
+	{else}
+		{include('partner_udvozles.tpl')}
+	{/if}
 
-	{include('menu4.tpl')}	
-	{include('referencia.tpl')}
-	{include('hir_doboz.tpl')}
-	{include('arfolyamdoboz.tpl')}
-	{include('reklam.tpl')}
 </div>
