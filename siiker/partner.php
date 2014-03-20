@@ -281,9 +281,11 @@ class siiker_partner extends siiker_dbalapclass {
 		if ($this->getLoggedIn()) {
 			return array('actionuri'=>'index.php',
 			'modificationuri'=>'index.php?com='.siiker_command::$PartnerMod,
+            'gyorsvasarlasuri'=>'index.php?com='.siiker_command::$Gyorsvasarlas,
 			'command'=>siiker_command::$Logout,
 			'jaxcommand'=>siiker_command::$Logout,
-			'nev'=>$this->nev);
+			'nev'=>$this->nev,
+            'viszontelado'=>$this->viszontelado);
 		}
 		else {
 			return array('actionuri'=>'index.php',

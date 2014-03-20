@@ -83,6 +83,31 @@ padding: 10px 0 10px 0;
 height:22px;
 overflow:hidden;
 }
+
+.gyorskep {
+    width: 170px;
+}
+
+.gyorsszoveg {
+    width: 400px;
+}
+.gyorsrow {
+    clear: both;
+}
+.gyorscol {
+    float: left;
+}
+.gyorsinput {
+    width: 40px;
+}
+.gyorssubmit {
+    float: right;
+    clear: both;
+}
+.gyorssubmit input {
+    padding: 3px;
+}
+
  .wf_in {
  color:#fff;
  padding: 4px 0px 0px 10px;

@@ -39,8 +39,10 @@ class siiker_command {
 	public static $DownloadFile='down';
 	public static $NagykoruCheck='nagykoru';
 	public static $SetNagykoru='setnagykoru';
+    public static $Gyorsvasarlas='gyorsvasar';
+    public static $Gyorssave='gyorssave';
 
-	public static $JAXCheckUniqueUsername='jaxcheckuniqueusername';
+    public static $JAXCheckUniqueUsername='jaxcheckuniqueusername';
 	public static $JAXCheckUniqueEmail='jaxcheckuniqueemail';
 	public static $JAXLogin='jaxlogin';
 	public static $JAXCreditCardCheck='jaxccardcheck';

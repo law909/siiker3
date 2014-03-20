@@ -50,7 +50,7 @@ class siiker_kosar extends siiker_dbalapclass {
 		}
 	}
 
-	public function addTo($termekkod) {
+	public function addTo($termekkod,$menny=1) {
 		if (!is_numeric($termekkod)) {
 			return null;
 		}
@@ -59,11 +59,11 @@ class siiker_kosar extends siiker_dbalapclass {
 			$arak=$termek->getAr($termekkod);
 			$this->getDb()->query('INSERT INTO web_ws_kosar (user_kod,termek_kod,mennyiseg,nettoegysar,bruttoegysar,'.
 				'nettoegysarhuf,bruttoegysarhuf,valutanem,sessid) VALUES '.
-				'('.siiker_store::getUser()->getKod().','.$termekkod.',1,'.$arak['nettohuf'].','.$arak['bruttohuf'].','.
+				'('.siiker_store::getUser()->getKod().','.$termekkod.',' . $menny . ','.$arak['nettohuf'].','.$arak['bruttohuf'].','.
 				$arak['nettohuf'].','.$arak['bruttohuf'].',0,"'.Zend_Session::getId().'")');
 		}
 		else {
-			$this->getDb()->query('UPDATE web_ws_kosar SET mennyiseg=mennyiseg+1 WHERE (termek_kod='.$termekkod.') AND '.
+			$this->getDb()->query('UPDATE web_ws_kosar SET mennyiseg=mennyiseg+'.$menny.' WHERE (termek_kod='.$termekkod.') AND '.
 				siiker_store::getUser()->getWhereSQL('user_kod','sessid'));
 		}
 		$this->createSzallitasiKoltseg();

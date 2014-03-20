@@ -412,6 +412,25 @@ switch ($command) {
 		siiker_store::getUserSession()->nagykoru=true;
 		Header('Location: /');
 		break;
+    case siiker_command::$Gyorsvasarlas:
+        siiker_store::writelog($tplloader->getTemplateName(siiker_command::$Gyorsvasarlas));
+		$termekhandler=new siiker_termekhandler($tplloader->getTemplateName(siiker_command::$Gyorsvasarlas));
+        $layouthandler->assignMainData($termekhandler->getGyorsvasarlasLista());
+        break;
+    case siiker_command::$Gyorssave:
+		$print_output=false;
+		$kosar=new siiker_kosar();
+        $kosar->clear();
+        $termekkodok=$params->getParam('termekkod',array());
+        $mennyisegek=$params->getParam('mennyiseg',array());
+        for($i=0;$i<count($termekkodok);$i++) {
+            if ($mennyisegek[$i]*1>0) {
+                $kosar->addTo($termekkodok[$i],$mennyisegek[$i]*1);
+            }
+        }
+		Header('Location: /index.php?com='.siiker_command::$KosarAdatBe);
+		break;
+
 }
 if ($print_output) {
 

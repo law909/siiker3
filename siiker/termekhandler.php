@@ -8,12 +8,20 @@ class siiker_termekhandler extends siiker_funkcio {
 	private $fejadat;
 
 	public function __construct($tplfilename) {
+        siiker_store::writelog($tplfilename);
 		parent::__construct($tplfilename);
 	}
 
 	public function getFejadat() {
 		return $this->fejadat;
 	}
+
+    public function getGyorsvasarlasLista() {
+		$tk=new siiker_termekcollection();
+        $er=$tk->getAllTermek();
+        $this->assignData('termekek', $er);
+        return $this->getTemplateResult();
+    }
 
 	public function getProcessedTermekLista($csoportkod,$page,$dimfilter) {
 		$tcsop=new siiker_termekcsoport();

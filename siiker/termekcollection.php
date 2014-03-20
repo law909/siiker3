@@ -52,6 +52,10 @@ class siiker_termekcollection extends siiker_dbalapclass {
 		return $this->getTermekData(3,'AND (t.kod='.$termekkod.')','','',true);
 	}
 
+    public function getAllTermek() {
+        return $this->getTermekData(2, '', 'ORDER BY t.csoportkod, nettohuf','',true);
+    }
+
 	public function getKedvencTermek($page) {
 		$pager=new law_pager($page,$this->dbparams->getParam(siiker_const::$pWEBTermekekSzama,10),
 			siiker_tools::getPermalink(siiker_command::$Kedvencek,array('on'=>array('par'=>''),'off'=>array('par'=>'')),$this->rewriteon));
