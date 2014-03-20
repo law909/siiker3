@@ -48,7 +48,7 @@ function submitLoginForm() {
 				if (data.showmessage) {
 					alert(data.message);
 				}
-				window.location.reload();
+				window.location.href='/';
 			}
 			else {
 				if (data.showmessage) {

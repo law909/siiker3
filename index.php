@@ -296,14 +296,19 @@ switch ($command) {
 		echo 'Pictures converted.';
 		break;
 	case siiker_command::$Home:
-		$hirminilista=new siiker_hir();
-		$fotartalom=new siiker_fooldal();
-		$termekajanlo=new siiker_termekajanlo();
-		$oldalkozep=new siiker_funkcio($tplloader->getTemplateName($command));
-		$oldalkozep->assignData('hirek',$hirminilista->getMiniListData());
-		$oldalkozep->assignData('fooldalszoveg',$fotartalom->getData());
-		$oldalkozep->assignData('termekek',$termekajanlo->getData());
-		$layouthandler->assignMaindata($oldalkozep->getTemplateResult());
+        if ($user->getLoggedIn()&&$user->viszontelado) {
+            Header('Location: /index.php?com='.siiker_command::$Gyorsvasarlas);
+        }
+        else {
+            $hirminilista=new siiker_hir();
+            $fotartalom=new siiker_fooldal();
+            $termekajanlo=new siiker_termekajanlo();
+            $oldalkozep=new siiker_funkcio($tplloader->getTemplateName($command));
+            $oldalkozep->assignData('hirek',$hirminilista->getMiniListData());
+            $oldalkozep->assignData('fooldalszoveg',$fotartalom->getData());
+            $oldalkozep->assignData('termekek',$termekajanlo->getData());
+            $layouthandler->assignMaindata($oldalkozep->getTemplateResult());
+        }
 		break;
 	case siiker_command::$ShowLinktar:
 		$linktar=new siiker_linktar();
