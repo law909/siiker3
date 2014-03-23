@@ -132,11 +132,24 @@ class siiker_menu extends siiker_dbalapclass {
 						$this->rewriteon);
 					break;
 			}
+            if (strpos($link, '=kosar') === false) {
+                $iskosar = false;
+            }
+            else {
+                $iskosar = true;
+            }
+            if (strpos($link, '=kedvenc') === false) {
+                $iskedvenc = false;
+            }
+            else {
+                $iskedvenc = true;
+            }
 			$result[]=array(
 				'uri'=>$link,
 				'caption'=>$rec['nev'],
 				'leiras'=>$rec['htmlleiras'],
 				'selected'=>0,
+                'kosar'=>$iskosar || $iskedvenc,
 				'elemcount'=>$rec['elemcount']);
 		}
 		return $result;

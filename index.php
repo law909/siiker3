@@ -465,7 +465,8 @@ if ($print_output) {
 	$layouthandler->assignData('theme',$themehandler->getTheme());
 	$layouthandler->assignData('nyelv',siiker_store::getLanguageHandler()->getLanguage());
 	$layouthandler->assignData('googleanalytics',$dbparams->getParamBlob(siiker_const::$pWEBGoogleAnalytics));
-
+    $layouthandler->assignData('userobj',$user);
+    
 	$layouthandler->assignData('gyorskeresocmd',siiker_command::$QuickSearch);
 
 	$layouthandler->assignData('login',$user->getLoginData());
