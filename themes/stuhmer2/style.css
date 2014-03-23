@@ -986,6 +986,7 @@ top: -57px;
 }
 
 .lebegokosar {
+    display: none;
     position: fixed;
     top: 256px;
     background-color: #fff;

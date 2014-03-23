@@ -52,6 +52,12 @@ class siiker_termekcollection extends siiker_dbalapclass {
 		return $this->getTermekData(3,'AND (t.kod='.$termekkod.')','','',true);
 	}
 
+    public function getGyorsvasarlasTermek() {
+        $aj = $this->getTermekData(2, 'AND (t.ajanlott=1)', 'ORDER BY t.csoportkod, nettohuf', '', true);
+        $norm = $this->getTermekData(2, '', 'ORDER BY t.csoportkod, nettohuf','',true);
+        return array_merge($aj, $norm);
+    }
+
     public function getAllTermek() {
         return $this->getTermekData(2, '', 'ORDER BY t.csoportkod, nettohuf','',true);
     }

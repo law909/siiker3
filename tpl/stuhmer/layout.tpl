@@ -62,10 +62,9 @@
 		<div><a name="top"></a>
 			{include('fejlec.tpl')}
 		</div>
-        {if ($userobj->viszontelado)}
-            <div class="lebegokosar">Nettó érték:<br><span class="lebegonetto">0</span> Ft<br>Bruttó érték:<br><span class="lebegobrutto">0</span> Ft</div>
-        {/if}
-
+    {if ($userobj->viszontelado)}
+        <div class="lebegokosar">Nettó érték:<br><span class="lebegonetto">0</span> Ft<br>Bruttó érték:<br><span class="lebegobrutto">0</span> Ft</div>
+    {/if}
 		<div class="whole">
 			{include('menu2.tpl')}
 			{include('tartalom.tpl')}

@@ -28,7 +28,7 @@
                     <p>{$_termek.data.leiras}</p>
                 </div>
                 <div class="gyorscol">
-                    <input class="gyorsinput" type="text" name="mennyiseg[]" data-netto="{round($_termek.data.nettoarhuf)}" data-brutto="{round($_termek.data.bruttoarhuf)}"> {$_termek.data.me}
+                    <input class="gyorsinput" type="text" name="mennyiseg[]" data-netto="{$_termek.data.nettoarhuf}" data-brutto="{$_termek.data.bruttoarhuf}"> {$_termek.data.me}
                     <input type="hidden" name="termekkod[]" value="{$_termek.data.kod}">
                 </div>
             </div>

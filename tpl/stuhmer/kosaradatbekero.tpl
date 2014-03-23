@@ -2,7 +2,8 @@
 	{if ($kosarlista.loggedin)}
 	<form id="KosarSubmitForm" action="index.php" method="post">
 	<table class="kosaradat"><tbody>
-
+        <tr><td>Nettó érték:</td><td>{number_format(round($kosarlista.sum.nettoar),0,',',' ')} Ft</td></tr>
+        <tr><td>Bruttó érték:</td><td>{number_format(round($kosarlista.sum.bruttoar),0,',',' ')} Ft</td></tr>
 		<tr><td><p class="szoveg_bold">{$text->regadatform->szallcim}</p></td></tr>
         <tr><td>Név:</td><td><input class="general_input" type="text" name="szal_nev" value="{$kosarlista.data.szal_nev}"></td></tr>
 		<tr><td>{$text->regadatform->irszam}</td><td><input class="general_input" type="text" name="szal_irszam" value="{$kosarlista.data.szal_irszam}"/></td></tr>

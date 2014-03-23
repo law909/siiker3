@@ -18,7 +18,7 @@ class siiker_termekhandler extends siiker_funkcio {
 
     public function getGyorsvasarlasLista() {
 		$tk=new siiker_termekcollection();
-        $er=$tk->getAllTermek();
+        $er=$tk->getGyorsvasarlasTermek();
         $this->assignData('termekek', $er);
         return $this->getTemplateResult();
     }
