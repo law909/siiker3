@@ -5,16 +5,16 @@
 			<span>{$spectext->focim->menu3}</span>
 		</div>
 	</div>
-		{foreach($menu3pontok,_menupont)}
-            {if ((!$userobj->viszontelado) || ($userobj->viszontelado && !$_menupont.kosar))}
-		<a class="menu3" href="{$_menupont.uri}">
-			{$_menupont.caption}
-			{if ($_menupont.elemcount>=0)}
-			({$_menupont.elemcount}{$text->termek->termek})
-			{/if}
-		</a>
+    {foreach($menu3pontok,_menupont)}
+        {if ((!$userobj->viszontelado) || ($userobj->viszontelado && !$_menupont.kosar))}
+        <a class="menu3" href="{$_menupont.uri}">
+            {$_menupont.caption}
+            {if ($_menupont.elemcount>=0)}
+            ({$_menupont.elemcount}{$text->termek->termek})
+            {/if}
+        </a>
         {/if}
-		{/foreach}
+    {/foreach}
 </div>
 
 {/if}
